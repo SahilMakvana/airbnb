@@ -8,6 +8,7 @@ import LikeButton from "./States/LikeButton.jsx";
 import LudoBoard from "./LudoBoard/LudoBoard.jsx";
 import TodoList from "./TodoList/TodoList.jsx";
 import Slate from "./Slate/Slate.jsx";
+import Lottery from "./Lottery/Lottery.jsx";
 
 function App() {
     return (
@@ -19,8 +20,9 @@ function App() {
             {/* <Counter /> */}
             {/* <LikeButton /> */}
             {/* <LudoBoard /> */}
-            <TodoList />
+            {/* <TodoList /> */}
             {/* <Slate /> */}
+            <Lottery />
         </>
     );
 }

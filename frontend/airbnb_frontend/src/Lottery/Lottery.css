@@ -1,0 +1,18 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input {
+    color: #688ee6;
+    text-decoration: solid;
+    width: 5px;
+    font: 1em/1.25em Arial, Helvetica, sans-serif;
+}
