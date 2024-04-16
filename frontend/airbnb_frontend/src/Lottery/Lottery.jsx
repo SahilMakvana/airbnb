@@ -31,6 +31,21 @@ const Lottery = () => {
             position: "top-center",
         });
     };
+
+    return (
+        <div>
+            <h4 style={{ margin: "10px" }}>Lottery Game</h4>
+            <hr />
+            <input type="number" min={0} max={9} value={ticket[0]} style={{ width: "25px", height: "25px" }} /> &nbsp;
+            <input type="number" min={0} max={1} value={ticket[1]} style={{ width: "25px", height: "25px" }} /> &nbsp;
+            <input type="number" min={0} max={1} value={ticket[2]} style={{ width: "25px", height: "25px" }} />
+            <hr />
+            <button onClick={generateTicket}>Generate Ticket</button>
+            <div>
+                <ToastContainer />
+            </div>
+        </div>
+    );
 };
 
 export default Lottery;
