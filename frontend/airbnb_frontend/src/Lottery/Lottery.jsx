@@ -6,17 +6,6 @@ import "./Lottery.css";
 const Lottery = () => {
     let [ticket, setTicket] = useState([0, 0, 0]);
 
-    function generateTicket() {
-        ticket.splice(0, ticket.length);
-        setTicket([...ticket]);
-        ticket.push(Math.floor(Math.random() * 10));
-        ticket.push(Math.floor(Math.random() * 10));
-        ticket.push(Math.floor(Math.random() * 10));
-        setTicket([...ticket]);
-
-        checkTicket();
-    }
-
     function checkTicket() {
         if (ticket[0] + ticket[1] + ticket[2] == 15) {
             console.log("Matched");
