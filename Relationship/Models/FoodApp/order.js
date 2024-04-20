@@ -17,7 +17,7 @@ const orserSchema = new Schema({
 const Order = mongoose.model("order", orserSchema);
 
 const addOrder = async () => {
-    let res = await Order.insertMany(
+    let res = await Order.insertMany([
         {
             item: "Pizza",
             price: 279,
@@ -33,10 +33,12 @@ const addOrder = async () => {
         {
             item: "Chocolates",
             price: 100,
-        }
-    );
+        },
+    ]);
 
     console.log(res);
 };
 
 addOrder();
+
+module.exports = Order;
