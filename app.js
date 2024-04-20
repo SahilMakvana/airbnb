@@ -75,27 +75,26 @@ app.get("/listing/:id", async (req, res) => {
 });
 
 // Create Route
-app.post(
-    "/listings",
-    wrapAsync(async (req, res, next) => {
-        if (!req.body.listing) {
-            throw new ExpressError();
-        }
-        let { title, description, image, price, location, country } = req.body;
-        let listing = {
-            title: title,
-            description: description,
-            image: image,
-            price: price,
-            location: location,
-            country: country,
-        };
-        console.log(listing);
-        let newListing = new Listing(listing);
-        await newListing.save();
-        res.redirect("/listings");
-    })
-);
+app.post("/listings", async (req, res, next) => {
+    console.log(req.body);
+    if (!req.body) {
+        throw new ExpressError();
+    }
+    let { title, description, image, price, location, country } = req.body;
+    console.log(req.body);
+    let listing = {
+        title: title,
+        description: description,
+        image: image,
+        price: price,
+        location: location,
+        country: country,
+    };
+    console.log(listing);
+    let newListing = new Listing(listing);
+    await newListing.save();
+    res.redirect("/listings");
+});
 
 // Edit Route
 app.get("/listing/:id/edit", async (req, res) => {
